@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Submit Complaint | JalaSeva</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">J</span><span>Gram Panchayat Portal<small>WATER PORTAL</small></span></a><nav><a href="index.html">Home</a><a class="active" href="complaint.html">Report issue</a><a href="track.html">Track complaint</a><a href="appointment.html">Water testing</a><a href="admin.html">Admin</a></nav><div class="language-switch" aria-label="Choose language"><button type="button" data-lang="en" class="selected">English</button><button type="button" data-lang="kn">ಕನ್ನಡ</button></div><a class="nav-cta" href="track.html">Track status ↗</a></header>
+<main class="form-page"><div class="page-intro"><span class="eyebrow">WE'RE HERE TO HELP</span><h1>Report a water issue.</h1><p>Share a few details so the Panchayat team can understand the problem.</p></div>
+<div class="form-layout"><aside class="form-aside"><div class="aside-icon">💧</div><h3>Your report makes a difference.</h3><p>Give clear details and the location of the issue. You can add a photo as supporting evidence.</p><div class="aside-note"><b>Before you submit</b><span>• Use a working phone number.</span><span>• Describe the location clearly.</span><span>• Do not upload personal documents.</span></div></aside>
+<form id="complaintForm" class="panel">
+<div class="form-title"><h2>Complaint details</h2><span>All fields marked * are required</span></div>
+<div class="field-grid"><label>Full name *<input name="name" required placeholder="Enter your name"></label><label>Mobile number *<input name="phone" required inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></label></div>
+<div class="field-grid"><label>Village / Ward *<input name="village" required placeholder="Enter village or ward"></label><label>Issue type *<select name="type" required><option value="">Select issue</option><option>Water shortage</option><option>Pipeline leakage</option><option>Water quality</option><option>Other</option></select></label></div>
+<label>Exact location *<input name="location" required placeholder="Street, landmark or area">
+  <button type="button" class="btn secondary location-btn" id="useCurrentLocation">📍 Use my current location</button>
+  <small id="locationMessage" class="location-message" aria-live="polite">Click the button to attach your current GPS location (optional).</small>
+</label>
+<label>Describe the problem *<textarea name="description" rows="4" required placeholder="Explain what happened and when you noticed it..."></textarea></label>
+<label>Upload a photo (optional) / ಫೋಟೋ ಅಪ್‌ಲೋಡ್ (ಐಚ್ಛಿಕ)
+  <div class="upload">
+    <input type="file" name="photo" id="complaintPhoto" accept="image/jpeg,image/png,image/webp">
+    <small>JPG, PNG or WEBP · Maximum 2 MB. Please do not upload personal documents.</small>
+    <img id="photoPreview" class="complaint-photo-preview" alt="Selected complaint photo preview" hidden>
+  </div>
+</label>
+<label class="consent"><input type="checkbox" required> I confirm that the information provided is correct.</label>
+<button class="btn primary submit-btn" type="submit">Submit complaint <span>→</span></button><p class="form-message" id="formMessage" aria-live="polite"></p>
+</form></div></main><footer><a class="brand footer-brand" href="index.html"><span class="brand-mark">J</span><span>Gram Panchayat Portal<small>WATER PORTAL</small></span></a><span>SDG 6 · Clean Water and Sanitation</span></footer><script src="app.js"></script></body></html>
